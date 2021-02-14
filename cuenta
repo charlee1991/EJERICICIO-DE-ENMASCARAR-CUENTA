@@ -1,0 +1,28 @@
+//Codigo realizado por Carlos Cogua y john Fredy Bonilla.
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        String numeroTarjeta, a = null, b = null;
+
+
+        System.out.println("Ingrese los 16 numeros de su tarjeta sin letras, espacios o carcteres especiales.");
+        numeroTarjeta = entrada.nextLine();
+
+
+        while(numeroTarjeta.length() != 16 || numeroTarjeta == "^[A-Z, a-z ]"){
+            System.out.println("Ingrese numero");
+            numeroTarjeta = entrada.nextLine();
+
+            a = numeroTarjeta.substring(0, 4);
+            b = numeroTarjeta.substring(12, 16);
+
+        }
+
+        System.out.println(a + " " + "xxxx" + " " + "xxxx" + " " + b);
+
+    }
+}
